@@ -1,13 +1,12 @@
 <template>
-  <div>
-    <router-link to="/demo1">demo1</router-link>
+  <div v-for="item in routes" :key="item.path">
+    <router-link :to="item.path">{{ item.path }}</router-link>
   </div>
-  <div>
-    <router-link to="/demo2">demo2</router-link>
+  <div style="margin-top: 50px">
+    <router-view></router-view>
   </div>
-
-  <router-view style="margin-top: 50px"></router-view>
 </template>
 <script setup lang='ts'>
+import {routes} from "./router";
 
 </script>

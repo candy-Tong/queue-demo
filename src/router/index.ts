@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Demo1 from '../pages/demo1/index.vue'
-import Demo2 from '../pages/demo2/index.vue'
 
-const routes = [
-  { path: '/', component: Demo1 },
-  { path: '/demo1', component: Demo1 },
-  { path: '/demo2', component: Demo2 },
+export const routes = [
+  { path: '/', component: ()=>import('../pages/demo1/index.vue')  },
+  { path: '/demo1', component: ()=>import('../pages/demo1/index.vue')  },
+  { path: '/demo2', component: ()=>import('../pages/demo2/index.vue')  },
+  { path: '/demo3', component: ()=>import('../pages/demo3/index.vue')  },
+  { path: '/demo4', component: ()=>import('../pages/demo4/index.vue') },
+  { path: '/demo5', component: ()=>import('../pages/demo5/index.vue') },
 ]
 
 
