@@ -1,4 +1,4 @@
-# Demo6 —— Post 队列
+# Demo 6 —— Post 队列
 
 该 Demo 构造以下内容：
 1. 使用 updated 生命周期

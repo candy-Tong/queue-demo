@@ -1,4 +1,4 @@
-# demo 8 —— 递归 Job
+# Demo 8 —— 递归 Job
 
 该 Demo 构造以下内容：
 1. 父组件 update 函数被加入队列
