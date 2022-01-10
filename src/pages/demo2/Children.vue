@@ -15,11 +15,10 @@ defineProps({
 })
 const emit = defineEmits(['add'])
 
-const childrenCount = ref(0)
 function add() {
-  // 交换了两者的顺序，改为先修改子组件依赖
-  childrenCount.value++		// 先改变 ChildrenCount
-  emit('add')				// 再通过事件 emit，改变属性 count
+  emit('add')
+  childrenCount.value++
 }
 
+const childrenCount = ref(0)
 </script>

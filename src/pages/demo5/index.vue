@@ -1,14 +1,22 @@
 <template>
-  <div>Father {{ count }}</div>
-  <Children :count='count' @add="onAdd" />
+  <div>
+    <button @click='add'>count: {{ count }}</button>
+    <div>watch value: {{ watchValue }}</div>
+  </div>
 </template>
 <script setup lang='ts'>
-import {ref} from 'vue'
-import Children from './Children.vue'
+import {ref, watch} from 'vue'
 
 const count = ref(0)
+const watchValue = ref(100)
 
-function onAdd() {
+function add() {
   count.value = count.value + 1
+  watchValue.value = watchValue.value + 1
+  watchValue.value = watchValue.value - 1
 }
+
+watch(watchValue, () => {
+  console.log('watch', watchValue.value)
+})
 </script>
